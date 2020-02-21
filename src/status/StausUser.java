@@ -8,21 +8,29 @@ package status;
 /**
  *
  * @author srinivsi
+ * @modifier KIRANDEEP KAUR
  */
 public class StausUser 
 {
-   public void statusDetail(String code)
+    enum Number{
+        
+        ZERO,ONE,TWO,THREE;
+        
+        
+    
+   
+   public void statusDetail(Number n)
 {
-switch(code.toUpperCase())
+switch(this)
         {
-        case "ZERO": System.out.println("REJECTED");
+        case ZERO: System.out.println("REJECTED");
         break;
-        case "ONE": System.out.println("PENDING");
+        case ONE: System.out.println("PENDING");
         break;
-        case "TWO":
+        case TWO:
         System.out.println("PROCESSING");
         break;
-        case "THREE": 
+        case THREE: 
             System.out.println("APPROVED");
         break;
         default:
@@ -30,5 +38,7 @@ switch(code.toUpperCase())
         break;
         }
 }
+    }
  
 }
+
